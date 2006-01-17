@@ -1,0 +1,27 @@
+-R ArithEx ArithEx 
+-R NArithEx NArithEx 
+-R Karatsuba Karatsuba 
+-R Order Order 
+-R TacticEx TacticEx 
+-I common
+ArithEx/Compare.v
+Karatsuba/Karatsuba.v
+Karatsuba/Timing.v
+Karatsuba/Zmult.v
+NArithEx/BinPosEx.v
+NArithEx/Nminus.v
+NArithEx/Nring.v
+NArithEx/Nshift.v
+NArithEx/Nsize.v
+NArithEx/Nsplit.v
+NArithEx/Pring.v
+NArithEx/Pshift.v
+NArithEx/Psize.v
+NArithEx/Psplit.v
+Order/Comparison.v
+Order/ComparisonDecOrd.v
+Order/DecidableOrder.v
+TacticEx/TacticEx.v
+common/Coercions.v
+common/Discharge.v
+common/utf8.v
