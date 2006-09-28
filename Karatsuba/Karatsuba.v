@@ -5,7 +5,7 @@ Require Import Nminus.
 Require Import NArith.
 Require Import Div2.
 Require Import Max.
-Require Import Nring.
+Require Import NArithRing.
 Require Import Compare.
 
 Tactic Notation "ringreplace" constr (a) "with" constr (b) :=

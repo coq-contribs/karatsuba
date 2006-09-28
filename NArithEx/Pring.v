@@ -1,4 +1,4 @@
-Require Export Nring.
+Require Export NArithRing.
 Require Import Ring.
 Require Import BinPos.
 Require Import BinNat.

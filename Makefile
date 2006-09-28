@@ -46,7 +46,7 @@ OPT=
 COQFLAGS=-q $(OPT) $(COQLIBS) $(OTHERFLAGS) $(COQ_XML)
 COQC=$(COQBIN)coqc
 GALLINA=gallina
-COQDOC=coqdoc
+COQDOC=$(COQBIN)coqdoc
 CAMLC=ocamlc -c
 CAMLOPTC=ocamlopt -c
 CAMLLINK=ocamlc
@@ -84,7 +84,6 @@ VFILES=ArithEx/Compare.v\
   Karatsuba/Zmult.v\
   NArithEx/BinPosEx.v\
   NArithEx/Nminus.v\
-  NArithEx/Nring.v\
   NArithEx/Nshift.v\
   NArithEx/Nsize.v\
   NArithEx/Nsplit.v\
@@ -111,7 +110,6 @@ all: ArithEx/Compare.vo\
   Karatsuba/Zmult.vo\
   NArithEx/BinPosEx.vo\
   NArithEx/Nminus.vo\
-  NArithEx/Nring.vo\
   NArithEx/Nshift.vo\
   NArithEx/Nsize.vo\
   NArithEx/Nsplit.vo\

@@ -10,7 +10,6 @@ Karatsuba/Timing.v
 Karatsuba/Zmult.v
 NArithEx/BinPosEx.v
 NArithEx/Nminus.v
-NArithEx/Nring.v
 NArithEx/Nshift.v
 NArithEx/Nsize.v
 NArithEx/Nsplit.v
