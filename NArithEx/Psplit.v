@@ -30,7 +30,7 @@ Defined.
 
 Open Local Scope N_scope.
 
-Lemma PsplitAt1 : forall n x (H:n < Psize x), (let s:=PsplitAt n x H in (snd s)+(Pshift n (fst s)))=x.
+Lemma PsplitAt1 : forall n x (H:(n < Psize x)%nat), (let s:=PsplitAt n x H in (snd s)+(Pshift n (fst s)))=x.
 Proof.
 induction n.
 auto.
@@ -46,10 +46,10 @@ inversion H.
 inversion H1.
 Qed.
 
-Definition PsplitAt2 : forall (n:nat) (x:positive) (Hlt:n < Psize x),
+Definition PsplitAt2 : forall (n:nat) (x:positive) (Hlt:(n < Psize x)%nat),
  match (snd (PsplitAt n x Hlt)) with
  | N0 => True
- | Npos x => (Psize x) <= n
+ | Npos x => ((Psize x) <= n)%nat
  end.
 Proof.
 induction n.
@@ -68,7 +68,7 @@ inversion Hlt.
 inversion H0.
 Qed.
 
-Definition PsplitAt3 : forall (n:nat) (x:positive) (Hlt:n < Psize x),
+Definition PsplitAt3 : forall (n:nat) (x:positive) (Hlt:(n < Psize x)%nat),
  (n+(Psize (fst (PsplitAt n x Hlt))))%nat = (Psize x).
 Proof.
 induction n;
@@ -102,7 +102,7 @@ Fixpoint PsplitAtFast (n:nat) (x:positive) {struct n} : positive * N :=
       end
   end.
 
-Lemma PsplitAtFastCorrect : forall n x (H:n < Psize x), (PsplitAtFast n x) = (PsplitAt n x H).
+Lemma PsplitAtFastCorrect : forall n x (H:(n < Psize x)%nat), (PsplitAtFast n x) = (PsplitAt n x H).
 Proof.
 induction n; intros.
 reflexivity.
