@@ -4,7 +4,7 @@ Require Export Pshift.
 Require Import TacticEx.
 Require Import Arith.
 
-Coercion Local Npos:positive>->NBinDefs.N.
+Coercion Local Npos:positive>->N.
 
 Definition PsplitAt (n:nat) (x:positive) : n < Psize x -> positive*N.
 fix 1.
