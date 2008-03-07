@@ -1,9 +1,4 @@
--R ArithEx ArithEx 
--R NArithEx NArithEx 
--R Karatsuba Karatsuba 
--R Order Order 
--R TacticEx TacticEx 
--I common
+-R . Karatsuba
 ArithEx/Compare.v
 Karatsuba/Karatsuba.v
 Karatsuba/Timing.v
