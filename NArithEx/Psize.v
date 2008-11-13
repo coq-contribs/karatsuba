@@ -16,7 +16,7 @@ induction x; simpl in *; auto with *.
 assert (forall x y : positive,
 ({Psize (x + y) <= S (Psize x)} + {Psize (x + y) <= S (Psize y)}) *
 ({Psize (Pplus_carry x y) <= S (Psize x)} + {Psize (Pplus_carry x y) <= S (Psize y)})).
-induction x; destruct y; simpl; 
-solve [destruct (IHx y); firstorder | firstorder].
-firstorder.
+induction x; destruct y ;
+  (try destruct (IHx y) as [[s0|s0] [s1|s1]] ; repeat split ; simpl ; auto). 
+intros. destruct (H0 x y) as [[s0|s0] [s1|s1]]; auto.
 Qed.
