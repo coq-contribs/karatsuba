@@ -6,8 +6,7 @@ Require Import Arith.
 
 Coercion Local Npos:positive>->N.
 
-Definition PsplitAt (n:nat) (x:positive) : n < Psize x -> positive*N.
-fix 1.
+Fixpoint PsplitAt (n:nat) (x:positive) : n < Psize x -> positive*N.
 destruct n.
 intros.
 exact (x, N0).
