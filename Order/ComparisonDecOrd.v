@@ -1,6 +1,7 @@
 Require Import utf8.
 Require Import TacticEx.
 Require Import Discharge.
+Require Import Coercions.
 
 Require Import Comparison.
 Require DecidableOrder.
