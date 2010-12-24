@@ -48,6 +48,6 @@ end.
 Ltac decideEquality :=
 match goal with
 | |- forall x y, {x = y}+{~x=y} => decide equality
-| |- {?a=?b}+{~?a=?b} => decide equality a b
-| |- {~?a=?b}+{?a=?b} => cut ({a=b}+{~a=b});[tauto | decide equality a b]
+| |- {?a=?b}+{~?a=?b} => decide equality
+| |- {~?a=?b}+{?a=?b} => cut ({a=b}+{~a=b});[tauto | decide equality]
 end.
