@@ -26,9 +26,11 @@ Notation "∀ x y z u : t , P" :=
   (forall x y z u : t , P) (at level 200, x ident, y ident, z ident, u ident) : type_scope.
 
 Notation "∃ x , P" := (exists x , P) (at level 200, x ident) : type_scope.
-Notation "∃ x y, P" := (exists x , (exists y , P)) (at level 200, x ident) : type_scope.
+Notation "∃ x y , P" := (exists x , (exists y , P))
+  (at level 200, x ident, y ident) : type_scope.
 Notation "∃ x : t , P" := (exists x : t, P) (at level 200, x ident) : type_scope.
-Notation "∃ x y : t , P" := (exists x : t, (exists y : t, P)) (at level 200, x ident) : type_scope.
+Notation "∃ x y : t , P" := (exists x : t, (exists y : t, P))
+  (at level 200, x ident, y ident) : type_scope.
 
 Notation "x ∨ y" := (x \/ y) (at level 85, right associativity) : type_scope.
 Notation "x ∧ y" := (x /\ y) (at level 80, right associativity) : type_scope.
