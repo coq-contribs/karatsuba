@@ -4,6 +4,8 @@ Require Export Pshift.
 Require Import TacticEx.
 Require Import Arith.
 
+Unset Standard Proposition Elimination Names.
+
 Coercion Local Npos:positive>->N.
 
 Fixpoint PsplitAt (n:nat) (x:positive) : n < Psize x -> positive*N.
