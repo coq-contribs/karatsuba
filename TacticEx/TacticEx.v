@@ -35,14 +35,14 @@ first
 
 Ltac LHS :=
 match goal with
-| |-(?a = _) => constr: a
-| |-(_ ?a _) => constr: a
+| |-(?a = _) => constr:(a)
+| |-(_ ?a _) => constr:(a)
 end.
 
 Ltac RHS :=
 match goal with
-| |-(_ = ?a) => constr: a
-| |-(_ _ ?a) => constr: a
+| |-(_ = ?a) => constr:(a)
+| |-(_ _ ?a) => constr:(a)
 end.
 
 Ltac decideEquality :=
