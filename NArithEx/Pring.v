@@ -3,8 +3,8 @@ Require Import Ring.
 Require Import BinPos.
 Require Import BinNat.
 
-Open Local Scope positive_scope.
-Open Local Scope N_scope.
+Local Open Scope positive_scope.
+Local Open Scope N_scope.
 
 Lemma plusMorphism : forall a b, (Npos (a+b)%positive) = (Npos a)+(Npos b).
 Proof.

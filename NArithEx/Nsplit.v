@@ -18,7 +18,7 @@ Fixpoint PsplitAt (n:nat) (x:positive) {struct n} : N * N :=
       end
   end.
 
-Open Local Scope N_scope.
+Local Open Scope N_scope.
 
 Lemma PsplitAtSum : forall n x , (let (a,b):=PsplitAt n x in b+(Nshift n a))=(Npos x).
 Proof.

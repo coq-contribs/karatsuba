@@ -1,6 +1,6 @@
 Require Export BinPos.
 
-Open Local Scope positive_scope.
+Local Open Scope positive_scope.
 
 Theorem Pcompare_refl : forall (p:positive) c, Pcompare p p c = c.
 intro x; induction x as [x Hrecx| x Hrecx| ]; auto.

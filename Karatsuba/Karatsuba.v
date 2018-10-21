@@ -11,7 +11,7 @@ Require Import Compare.
 Tactic Notation "ringreplace" constr (a) "with" constr (b) :=
 replace a with b ; [idtac | solve [ ring ]].
 
-Open Local Scope N_scope.
+Local Open Scope N_scope.
 
 Definition KaratsubaStop : nat := 40%nat.
 

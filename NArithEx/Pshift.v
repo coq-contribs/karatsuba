@@ -8,7 +8,7 @@ end.
 
 Definition Pow2 (n:nat) := Pshift n 1.
 
-Open Local Scope positive_scope.
+Local Open Scope positive_scope.
 
 Lemma Pshift1 : forall x y n, (Pshift n x)*y=(Pshift n (x*y)).
 Proof.

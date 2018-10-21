@@ -6,7 +6,7 @@ Require Import Arith.
 
 Unset Standard Proposition Elimination Names.
 
-Coercion Local Npos:positive>->N.
+Local Coercion Npos:positive>->N.
 
 Fixpoint PsplitAt (n:nat) (x:positive) : n < Psize x -> positive*N.
 destruct n.
@@ -29,7 +29,7 @@ clear PsplitAt.
 abstract (inversion H; inversion H1).
 Defined.
 
-Open Local Scope N_scope.
+Local Open Scope N_scope.
 
 Lemma PsplitAt1 : forall n x (H:(n < Psize x)%nat), (let s:=PsplitAt n x H in (snd s)+(Pshift n (fst s)))=x.
 Proof.
