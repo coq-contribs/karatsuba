@@ -1,5 +1,5 @@
 Inductive prodTactic (A : Type) (B : Type) : Type :=  pairTactic : A -> B -> prodTactic A B.
-Implicit Arguments pairTactic [A B].
+Arguments pairTactic [A B].
 Inductive unitTactic : Type := ttTactic : unitTactic.
 
 Notation "[ x , y , .. , z ]" := (pairTactic .. (pairTactic x y) .. z) (at level 1) : tactic_scope.

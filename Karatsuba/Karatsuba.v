@@ -16,7 +16,7 @@ Local Open Scope N_scope.
 Definition KaratsubaStop : nat := 40%nat.
 
 Fixpoint KaratsubaMultF (i:nat) (a b:N) {struct i} : N :=
- let (a', b') := match (Ncompare a b) with
+ let (a', b') := match (N.compare a b) with
                  | Lt => (b, a)
                  | _ => (a, b)
                  end in
