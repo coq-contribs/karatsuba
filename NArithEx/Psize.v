@@ -11,7 +11,7 @@ end.
 Lemma Psize1 : forall x y, {Psize (x+y) <= S (Psize x)}+{Psize (x+y) <= S (Psize y)}.
 Proof.
 pose le_n_S.
-assert (forall x, Psize (Psucc x) <= S (Psize x)).
+assert (forall x, Psize (Pos.succ x) <= S (Psize x)).
 induction x; simpl in *; auto with *.
 assert (forall x y : positive,
 ({Psize (x + y) <= S (Psize x)} + {Psize (x + y) <= S (Psize y)}) *

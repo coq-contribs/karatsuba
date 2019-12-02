@@ -13,7 +13,7 @@ Fixpoint PsplitAt (n:nat) (x:positive) {struct n} : N * N :=
           in (p0, Ndouble_plus_one n1)
       | xO x0 =>
           let (p0, n1) := PsplitAt n0 x0 
-          in (p0, Ndouble n1)
+          in (p0, N.double n1)
       | xH => (N0,Npos x)
       end
   end.

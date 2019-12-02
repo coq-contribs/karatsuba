@@ -23,7 +23,7 @@ simpl in H.
 assert (n < Psize x);
 auto with *.
 destruct (PsplitAt _ _ H0).
-exact (p, Ndouble n0).
+exact (p, N.double n0).
 elimtype False.
 clear PsplitAt.
 abstract (inversion H; inversion H1).
@@ -98,7 +98,7 @@ Fixpoint PsplitAtFast (n:nat) (x:positive) {struct n} : positive * N :=
           in (p0, Ndouble_plus_one n1)
       | xO x0 =>
           let (p0, n1) := PsplitAtFast n0 x0 
-          in (p0, Ndouble n1)
+          in (p0, N.double n1)
       | xH => (xH,N0) (* Garbage *)
       end
   end.
